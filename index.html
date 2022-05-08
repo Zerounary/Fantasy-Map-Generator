@@ -283,7 +283,7 @@
         <button
           id="optionsTrigger"
           data-t="tipOptionsTrigger"
-          data-tip="Click to show the Menu. Shortcut: Tab"
+          data-tip="点击显示菜单. 快捷键: Tab"
           class="options glow"
           onclick="showOptions(event)"
           style="padding: 0.6em 0.45em"
@@ -293,7 +293,7 @@
         <button
           id="regenerate"
           data-t="tipRegenerate"
-          data-tip="Click to generate a new map. Shortcut: F2"
+          data-tip="点击生成一个新的地图. 快捷键: F2"
           onclick="regeneratePrompt('drawer')"
           class="options"
           style="display: none"
@@ -303,24 +303,24 @@
       </div>
 
       <div id="options" style="display: none">
-        <div class="drag-trigger" data-t="optionsDragTrigger" data-tip="Drag to move the Menu"></div>
+        <div class="drag-trigger" data-t="optionsDragTrigger" data-tip="点击拖拽菜单"></div>
 
         <div class="tab">
-          <button id="optionsHide" data-t="optionsHide" data-tip="Click to hide the Menu. Shortcut: Tab or Esc" class="options" onclick="hideOptions(event)">
+          <button id="optionsHide" data-t="optionsHide" data-tip="点击隐藏菜单. 快捷键: Tab or Esc" class="options" onclick="hideOptions(event)">
             ◄
           </button>
-          <button id="layersTab" data-t="layersTab" data-tip="Click to change map layers" class="options active"><t data-t="layers">图层</t></button>
-          <button id="styleTab" data-t="styleTab" data-tip="Click to open style editor" class="options"><t data-t="style">样式</t></button>
-          <button id="optionsTab" data-t="optionsTab" data-tip="Click to change generation and UI options" class="options">
+          <button id="layersTab" data-t="layersTab" data-tip="点击修改地图图层" class="options active"><t data-t="layers">图层</t></button>
+          <button id="styleTab" data-t="styleTab" data-tip="点击打开样式编辑" class="options"><t data-t="style">样式</t></button>
+          <button id="optionsTab" data-t="optionsTab" data-tip="点击修改生成和UI选项" class="options">
             <t data-t="options">选项</t>
           </button>
-          <button id="toolsTab" data-t="toolsTab" data-tip="Click to open tools menu" class="options"><t data-t="tools">工具</t></button>
-          <button id="aboutTab" data-t="aboutTab" data-tip="Click to see Generator info" class="options"><t data-t="about">关于</t></button>
+          <button id="toolsTab" data-t="toolsTab" data-tip="点击打开工具菜单" class="options"><t data-t="tools">工具</t></button>
+          <button id="aboutTab" data-t="aboutTab" data-tip="点击查看生成的关于信息" class="options"><t data-t="about">关于</t></button>
         </div>
 
         <div id="layersContent" class="tabcontent" style="display: block">
-          <p data-tip="Select a map layers preset" style="display: inline-block">预设图层:</p>
-          <select data-tip="Select a map layers preset" id="layersPreset" onchange="changePreset(this.value)" style="width: 45%">
+          <p data-tip="选择一个预设图层" style="display: inline-block">预设图层:</p>
+          <select data-tip="选择一个预设图层" id="layersPreset" onchange="changePreset(this.value)" style="width: 45%">
             <option value="political" selected>政治地图</option>
             <option value="cultural">文化地图</option>
             <option value="religions">宗派地图</option>
@@ -349,11 +349,11 @@
             onclick="removePreset()"
           ></button>
 
-          <p data-tip="Click to toggle a layer, drag to raise or lower a layer. Ctrl + click to edit layer style">显示的图层和图层顺序:</p>
-          <ul data-tip="Click to toggle a layer, drag to raise or lower a layer. Ctrl + click to edit layer style" id="mapLayers">
+          <p data-tip="点击开关一个图层, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式.">显示的图层和图层顺序:</p>
+          <ul data-tip="点击开关一个图层, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式." id="mapLayers">
             <li
               id="toggleTexture"
-              data-tip="Texture overlay: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: X"
+              data-tip="纹理覆盖: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: X"
               class="buttonoff"
               onclick="toggleTexture(event)"
             >
@@ -362,7 +362,7 @@
             </li>
             <li
               id="toggleHeight"
-              data-tip="Heightmap: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: H"
+              data-tip="高度: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: H"
               class="buttonoff"
               onclick="toggleHeight(event)"
             >
@@ -371,7 +371,7 @@
             </li>
             <li
               id="toggleBiomes"
-              data-tip="Biomes: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: B"
+              data-tip="生物: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: B"
               class="buttonoff"
               onclick="toggleBiomes(event)"
             >
@@ -380,7 +380,7 @@
             </li>
             <li
               id="toggleCells"
-              data-tip="Cells structure: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: E"
+              data-tip="单元格结构: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: E"
               class="buttonoff"
               onclick="toggleCells(event)"
             >
@@ -389,7 +389,7 @@
             </li>
             <li
               id="toggleGrid"
-              data-tip="Grid: click to toggle, drag to raise or lower. Ctrl + click to edit layer style and select type. Shortcut: G"
+              data-tip="网格: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式和选择类型. 快捷键: G"
               class="buttonoff"
               onclick="toggleGrid(event)"
             >
@@ -398,7 +398,7 @@
             </li>
             <li
               id="toggleCoordinates"
-              data-tip="Coordinate grid: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: O"
+              data-tip="坐标网格: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: O"
               class="buttonoff"
               onclick="toggleCoordinates(event)"
             >
@@ -407,16 +407,16 @@
             </li>
             <li
               id="toggleCompass"
-              data-tip="Wind (Compass) Rose: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: W"
+              data-tip="风 (罗盘) Rose: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: W"
               class="buttonoff"
               onclick="toggleCompass(event)"
             >
               <!-- <u>W</u>ind Rose -->
-              风图
+              风
             </li>
             <li
               id="toggleRivers"
-              data-tip="Rivers: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: V"
+              data-tip="河流: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: V"
               onclick="toggleRivers(event)"
             >
               <!-- Ri<u>v</u>ers -->
@@ -424,7 +424,7 @@
             </li>
             <li
               id="toggleRelief"
-              data-tip="Relief and biome icons: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: F"
+              data-tip="地标和生物图标: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: F"
               class="buttonoff"
               onclick="toggleRelief(event)"
             >
@@ -433,7 +433,7 @@
             </li>
             <li
               id="toggleReligions"
-              data-tip="Religions: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: R"
+              data-tip="宗派: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: R"
               class="buttonoff"
               onclick="toggleReligions(event)"
             >
@@ -442,7 +442,7 @@
             </li>
             <li
               id="toggleCultures"
-              data-tip="Cultures: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: C"
+              data-tip="文化: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: C"
               class="buttonoff"
               onclick="toggleCultures(event)"
             >
@@ -451,7 +451,7 @@
             </li>
             <li
               id="toggleStates"
-              data-tip="States: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: S"
+              data-tip="国家: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: S"
               onclick="toggleStates(event)"
             >
               <!-- <u>S</u>tates -->
@@ -459,7 +459,7 @@
             </li>
             <li
               id="toggleProvinces"
-              data-tip="Provinces: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: P"
+              data-tip="省份: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: P"
               class="buttonoff"
               onclick="toggleProvinces(event)"
             >
@@ -468,7 +468,7 @@
             </li>
             <li
               id="toggleZones"
-              data-tip="Zones: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: Z"
+              data-tip="气候带: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: Z"
               class="buttonoff"
               onclick="toggleZones(event)"
             >
@@ -477,7 +477,7 @@
             </li>
             <li
               id="toggleBorders"
-              data-tip="State borders: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: D"
+              data-tip="国家边界: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: D"
               onclick="toggleBorders(event)"
             >
               <!-- Bor<u>d</u>ers -->
@@ -485,7 +485,7 @@
             </li>
             <li
               id="toggleRoutes"
-              data-tip="Trade routes: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: U"
+              data-tip="商贸路线: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: U"
               onclick="toggleRoutes(event)"
             >
               <!-- Ro<u>u</u>tes -->
@@ -493,7 +493,7 @@
             </li>
             <li
               id="toggleTemp"
-              data-tip="Temperature map: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: T"
+              data-tip="温度地图: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: T"
               class="buttonoff"
               onclick="toggleTemp(event)"
             >
@@ -502,7 +502,7 @@
             </li>
             <li
               id="togglePopulation"
-              data-tip="Population map: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: N"
+              data-tip="人口地图: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: N"
               class="buttonoff"
               onclick="togglePopulation(event)"
             >
@@ -511,7 +511,7 @@
             </li>
             <li
               id="toggleIce"
-              data-tip="Icebergs and glaciers: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: J"
+              data-tip="冰山和冰川: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: J"
               class="buttonoff"
               onclick="toggleIce(event)"
             >
@@ -520,7 +520,7 @@
             </li>
             <li
               id="togglePrec"
-              data-tip="Precipitation map: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: A"
+              data-tip="降雨地图: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: A"
               class="buttonoff"
               onclick="togglePrec(event)"
             >
@@ -529,7 +529,7 @@
             </li>
             <li
               id="toggleEmblems"
-              data-tip="Emblems: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: Y"
+              data-tip="象征: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: Y"
               class="buttonoff"
               onclick="toggleEmblems(event)"
             >
@@ -538,7 +538,7 @@
             </li>
             <li
               id="toggleLabels"
-              data-tip="Labels: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: L"
+              data-tip="标签: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: L"
               onclick="toggleLabels(event)"
             >
               <!-- <u>L</u>abels -->
@@ -546,7 +546,7 @@
             </li>
             <li
               id="toggleIcons"
-              data-tip="Burg icons: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: I"
+              data-tip="图标: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: I"
               onclick="toggleIcons(event)"
             >
               <!-- <u>I</u>cons -->
@@ -554,7 +554,7 @@
             </li>
             <li
               id="toggleMilitary"
-              data-tip="Military forces: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: M"
+              data-tip="军事力量: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: M"
               class="buttonoff"
               onclick="toggleMilitary(event)"
             >
@@ -563,7 +563,7 @@
             </li>
             <li
               id="toggleMarkers"
-              data-tip="Markers: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: K"
+              data-tip="标记: 点击开关, 拖拽可以移动一个图层. Ctrl + 点击 可以修改样式. 快捷键: K"
               class="buttonoff"
               onclick="toggleMarkers(event)"
             >
@@ -572,7 +572,7 @@
             </li>
             <li
               id="toggleRulers"
-              data-tip="Rulers: click to toggle, drag to move, click on label to delete. Ctrl + click to edit layer style. Shortcut: = (equal)"
+              data-tip="统治者: 点击开关, 拖拽可以移, 点击标签可以删除. Ctrl + 点击 可以修改样式. 快捷键: = (equal)"
               class="buttonoff"
               onclick="toggleRulers(event)"
             >
@@ -581,7 +581,7 @@
             </li>
             <li
               id="toggleScaleBar"
-              data-tip="Scale Bar: click to toggle. Ctrl + click to edit style. Shortcut: / (slash)"
+              data-tip="比例尺: 点击开关. Ctrl + 点击 可以修改样式. 快捷键: / (slash)"
               onclick="toggleScaleBar(event)"
               class="solid"
             >
@@ -592,9 +592,9 @@
 
           <div id="viewMode" data-tip="Set view node">
             <p>查看模式:</p>
-            <button data-tip="Standard view mode that allows to edit the map" id="viewStandard" class="pressed">标准</button>
-            <button data-tip="Map presentation in 3D scene. Works best for heightmap. Cannot be used for editing" id="viewMesh">3D 场景</button>
-            <button data-tip="Project map on globe. Cannot be used for editing" id="viewGlobe">球体</button>
+            <button data-tip="允许编辑地图的标准视图模式" id="viewStandard" class="pressed">标准</button>
+            <button data-tip="3D 场景中的地图演示。 最适合高度图。 不能用于编辑" id="viewMesh">3D 场景</button>
+            <button data-tip="地球上的项目地图。 不能用于编辑" id="viewGlobe">球体</button>
           </div>
         </div>
 
@@ -1695,27 +1695,27 @@
         <div id="toolsContent" class="tabcontent">
           <p>Click to configure:</p>
           <div>
-            <button id="editHeightmapButton" data-tip="Click to open Heightmap customization menu. Shortcut: Shift + H">Heightmap</button>
-            <button id="editBiomesButton" data-tip="Click to open Biomes Editor. Shortcut: Shift + B">Biomes</button>
-            <button id="editStatesButton" data-tip="Click to open States Editor. Shortcut: Shift + S">States</button>
-            <button id="editProvincesButton" data-tip="Click to open Provinces Editor. Shortcut: Shift + P">Provinces</button>
-            <button id="editDiplomacyButton" data-tip="Click to open Diplomatical relationships Editor. Shortcut: Shift + D">Diplomacy</button>
-            <button id="editCulturesButton" data-tip="Click to open Cultures Editor. Shortcut: Shift + C">Cultures</button>
-            <button id="editNamesBaseButton" data-tip="Click to open Namesbase Editor. Shortcut: Shift + N">Namesbase</button>
-            <button id="editZonesButton" data-tip="Click to open Zones Editor. Shortcut: Shift + Z">Zones</button>
-            <button id="editReligions" data-tip="Click to open Religions Editor. Shortcut: Shift + R">Religions</button>
-            <button id="editEmblemButton" data-tip="Click to open Emblem Editor. Shortcut: Shift + Y">Emblems</button>
-            <button id="editUnitsButton" data-tip="Click to open Units Editor. Shortcut: Shift + Q">Units</button>
-            <button id="editNotesButton" data-tip="Click to open Notes Editor. Shortcut: Shift + O">Notes</button>
+            <button id="editHeightmapButton" data-tip="Click to open Heightmap customization menu. 快捷键: Shift + H">Heightmap</button>
+            <button id="editBiomesButton" data-tip="Click to open Biomes Editor. 快捷键: Shift + B">Biomes</button>
+            <button id="editStatesButton" data-tip="Click to open States Editor. 快捷键: Shift + S">States</button>
+            <button id="editProvincesButton" data-tip="Click to open Provinces Editor. 快捷键: Shift + P">Provinces</button>
+            <button id="editDiplomacyButton" data-tip="Click to open Diplomatical relationships Editor. 快捷键: Shift + D">Diplomacy</button>
+            <button id="editCulturesButton" data-tip="Click to open Cultures Editor. 快捷键: Shift + C">Cultures</button>
+            <button id="editNamesBaseButton" data-tip="Click to open Namesbase Editor. 快捷键: Shift + N">Namesbase</button>
+            <button id="editZonesButton" data-tip="Click to open Zones Editor. 快捷键: Shift + Z">Zones</button>
+            <button id="editReligions" data-tip="Click to open Religions Editor. 快捷键: Shift + R">Religions</button>
+            <button id="editEmblemButton" data-tip="Click to open Emblem Editor. 快捷键: Shift + Y">Emblems</button>
+            <button id="editUnitsButton" data-tip="Click to open Units Editor. 快捷键: Shift + Q">Units</button>
+            <button id="editNotesButton" data-tip="Click to open Notes Editor. 快捷键: Shift + O">Notes</button>
           </div>
 
           <p>Click to overview:</p>
           <div>
-            <button id="overviewBurgsButton" data-tip="Click to open Burgs Overview. Shortcut: Shift + T">Burgs</button>
-            <button id="overviewRiversButton" data-tip="Click to open Rivers Overview. Shortcut: Shift + V">Rivers</button>
-            <button id="overviewMilitaryButton" data-tip="Click to open Military Forces Overview. Shortcut: Shift + M">Military</button>
-            <button id="overviewMarkersButton" data-tip="Click to open Markers Overview. Shortcut: Shift + K">Markers</button>
-            <button id="overviewCellsButton" data-tip="Click to open Cell details view. Shortcut: Shift + E">Cells</button>
+            <button id="overviewBurgsButton" data-tip="Click to open Burgs Overview. 快捷键: Shift + T">Burgs</button>
+            <button id="overviewRiversButton" data-tip="Click to open Rivers Overview. 快捷键: Shift + V">Rivers</button>
+            <button id="overviewMilitaryButton" data-tip="Click to open Military Forces Overview. 快捷键: Shift + M">Military</button>
+            <button id="overviewMarkersButton" data-tip="Click to open Markers Overview. 快捷键: Shift + K">Markers</button>
+            <button id="overviewCellsButton" data-tip="Click to open Cell details view. 快捷键: Shift + E">Cells</button>
           </div>
 
           <p>Click to regenerate:</p>
@@ -1746,11 +1746,11 @@
 
           <p>Click to add:</p>
           <div id="addFeature">
-            <button id="addBurgTool" data-tip="Click on map to place a burg. Hold <kbd>Shift</kbd> to add multiple. Shortcut: Shift + 1">Burg</button>
-            <button id="addLabel" data-tip="Click on map to place label. Hold Shift to add multiple. Shortcut: Shift + 2">Label</button>
-            <button id="addRiver" data-tip="Click on map to place a river. Hold Shift to add multiple. Shortcut: Shift + 3">River</button>
-            <button id="addRoute" data-tip="Click on map to place a route. Shortcut: Shift + 4">Route</button>
-            <button id="addMarker" data-tip="Click on map to place a marker. Hold Shift to add multiple. Shortcut: Shift + 5">Marker</button>
+            <button id="addBurgTool" data-tip="Click on map to place a burg. Hold <kbd>Shift</kbd> to add multiple. 快捷键: Shift + 1">Burg</button>
+            <button id="addLabel" data-tip="Click on map to place label. Hold Shift to add multiple. 快捷键: Shift + 2">Label</button>
+            <button id="addRiver" data-tip="Click on map to place a river. Hold Shift to add multiple. 快捷键: Shift + 3">River</button>
+            <button id="addRoute" data-tip="Click on map to place a route. 快捷键: Shift + 4">Route</button>
+            <button id="addMarker" data-tip="Click on map to place a marker. Hold Shift to add multiple. 快捷键: Shift + 5">Marker</button>
           </div>
 
           <p>Click to create a new map:</p>
@@ -1887,11 +1887,11 @@
         </div>
 
         <div id="sticked">
-          <button id="newMapButton" data-tip="Generate a new map based on options. Shortcut: F2">新建地图</button>
+          <button id="newMapButton" data-tip="Generate a new map based on options. 快捷键: F2">新建地图</button>
           <button id="exportButton" data-tip="Select format to download image or export map data">导出</button>
           <button id="saveButton" data-tip="Save fully-functional map in .map format">保存</button>
           <button id="loadButton" data-tip="Load fully-functional map in .map format">加载</button>
-          <button id="zoomReset" data-tip="Reset map zoom. Shortcut: 0">重置缩放</button>
+          <button id="zoomReset" data-tip="Reset map zoom. 快捷键: 0">重置缩放</button>
         </div>
       </div>
     </div>
@@ -2045,7 +2045,7 @@
 
         <button id="labelAlign" data-tip="Turn text path into a straight line" class="icon-resize-horizontal"></button>
         <button id="labelLegend" data-tip="Edit free text notes (legend) for this label" class="icon-edit"></button>
-        <button id="labelRemoveSingle" data-tip="Remove the label. Shortcut: Delete" class="icon-trash fastDelete"></button>
+        <button id="labelRemoveSingle" data-tip="Remove the label. 快捷键: Delete" class="icon-trash fastDelete"></button>
       </div>
 
       <div id="riverEditor" class="dialog" style="display: none">
@@ -2104,7 +2104,7 @@
           <button id="riverEditStyle" data-tip="Edit style for all rivers in Style Editor" class="icon-brush"></button>
           <button id="riverElevationProfile" data-tip="Show the elevation profile for the river" class="icon-chart-area"></button>
           <button id="riverLegend" data-tip="Edit free text notes (legend) for the river" class="icon-edit"></button>
-          <button id="riverRemove" data-tip="Remove river. Shortcut: Delete" class="icon-trash fastDelete"></button>
+          <button id="riverRemove" data-tip="Remove river. 快捷键: Delete" class="icon-trash fastDelete"></button>
         </div>
       </div>
 
@@ -2225,7 +2225,7 @@
         <button id="routeSplit" data-tip="Click on a control point to split the route" class="icon-unlink"></button>
         <button id="routeLegend" data-tip="Edit free text notes (legend) for the route" class="icon-edit"></button>
         <button id="routeNew" data-tip="Create new route clicking on map" class="icon-map-pin"></button>
-        <button id="routeRemove" data-tip="Remove route. Shortcut: Delete" class="icon-trash fastDelete"></button>
+        <button id="routeRemove" data-tip="Remove route. 快捷键: Delete" class="icon-trash fastDelete"></button>
       </div>
 
       <div id="iceEditor" class="dialog" style="display: none">
@@ -2233,7 +2233,7 @@
         <button id="iceRandomize" data-tip="Randomize Iceberg shape" class="icon-shuffle"></button>
         <input id="iceSize" data-tip="Change Iceberg size" type="range" min=".05" max="1" step=".01" />
         <button id="iceNew" data-tip="Add an Iceberg (click on map)" class="icon-plus"></button>
-        <button id="iceRemove" data-tip="Remove the element. Shortcut: Delete" class="icon-trash fastDelete"></button>
+        <button id="iceRemove" data-tip="Remove the element. 快捷键: Delete" class="icon-trash fastDelete"></button>
       </div>
 
       <div id="coastlineEditor" class="dialog" style="display: none">
@@ -2420,7 +2420,7 @@
           <button id="reliefCopy" data-tip="Copy selected relief icon" class="icon-clone"></button>
           <button id="reliefMoveFront" data-tip="Move selected relief icon to front" class="icon-level-up"></button>
           <button id="reliefMoveBack" data-tip="Move selected relief icon back" class="icon-level-down"></button>
-          <button id="reliefRemove" data-tip="Remove selected relief icon or icon type. Shortcut: Delete" class="icon-trash fastDelete"></button>
+          <button id="reliefRemove" data-tip="Remove selected relief icon or icon type. 快捷键: Delete" class="icon-trash fastDelete"></button>
         </div>
       </div>
 
@@ -2566,7 +2566,7 @@
           <button id="burgRelocate" data-tip="Relocate burg" class="icon-target"></button>
           <button id="burglLegend" data-tip="Edit free text notes (legend) for this burg" class="icon-edit"></button>
           <button id="burgLock" class="icon-lock-open" onmouseover="showElementLockTip(event)"></button>
-          <button id="burgRemove" data-tip="Remove non-capital burg. Shortcut: Delete" class="icon-trash fastDelete"></button>
+          <button id="burgRemove" data-tip="Remove non-capital burg. 快捷键: Delete" class="icon-trash fastDelete"></button>
         </div>
       </div>
 
@@ -2625,7 +2625,7 @@
           <button id="markerNotes" data-tip="Edit place legend (notes)" class="icon-edit"></button>
           <button id="markerLock" class="icon-lock-open" onmouseover="showElementLockTip(event)"></button>
           <button id="markerAdd" data-tip="Add additional marker of that type" class="icon-plus"></button>
-          <button id="markerRemove" data-tip="Remove the marker. Shortcut: Delete" class="icon-trash fastDelete"></button>
+          <button id="markerRemove" data-tip="Remove the marker. 快捷键: Delete" class="icon-trash fastDelete"></button>
         </div>
       </div>
 
@@ -2654,7 +2654,7 @@
           <button id="regimentAttach" data-tip="Attach regiment to another one (include this regiment to another one)" class="icon-attach"></button>
           <button id="regimentRegenerateLegend" data-tip="Regenerate legend for this regiment" class="icon-retweet"></button>
           <button id="regimentLegend" data-tip="Edit free text notes (legend) for this regiment" class="icon-edit"></button>
-          <button id="regimentRemove" data-tip="Remove regiment. Shortcut: Delete" class="icon-trash fastDelete"></button>
+          <button id="regimentRemove" data-tip="Remove regiment. 快捷键: Delete" class="icon-trash fastDelete"></button>
         </div>
       </div>
 
@@ -2871,7 +2871,7 @@
         </div>
 
         <div id="brushesSliders" style="display: none">
-          <div data-tip="Change brush size. Shortcut: + (increase), – (decrease)" style="padding-bottom: 1px">
+          <div data-tip="Change brush size. 快捷键: + (increase), – (decrease)" style="padding-bottom: 1px">
             <div style="width: 3.2em; display: inline-block"><i>Radius:</i></div>
             <input id="brushRadius" oninput="tip('Brush radius: '+this.value); brushRadiusNumber.value = this.value" type="range" min="1" max="99" value="25" />
             <input
@@ -3062,7 +3062,7 @@
           <button id="biomesPercentage" data-tip="Toggle percentage / absolute values views" class="icon-percent"></button>
           <button id="biomesManually" data-tip="Manually re-assign biomes to not follow the default moisture/temperature pattern" class="icon-brush"></button>
           <div id="biomesManuallyButtons" style="display: none">
-            <label data-tip="Change brush size. Shortcut: + (increase), – (decrease)" class="italic"
+            <label data-tip="Change brush size. 快捷键: + (increase), – (decrease)" class="italic"
               >Brush radius:
               <input
                 id="biomesManuallyBrush"
@@ -3171,7 +3171,7 @@
 
           <button id="statesManually" data-tip="Manually re-assign states" class="icon-brush"></button>
           <div id="statesManuallyButtons" style="display: none">
-            <label data-tip="Change brush size. Shortcut: + (increase), – (decrease)" class="italic"
+            <label data-tip="Change brush size. 快捷键: + (increase), – (decrease)" class="italic"
               >Brush size:
               <input
                 id="statesManuallyBrush"
@@ -3334,7 +3334,7 @@
 
           <button id="provincesManually" data-tip="Manually re-assign provinces" class="icon-brush"></button>
           <div id="provincesManuallyButtons" style="display: none">
-            <label data-tip="Change brush size. Shortcut: + (increase), – (decrease)" class="italic"
+            <label data-tip="Change brush size. 快捷键: + (increase), – (decrease)" class="italic"
               >Brush size:
               <input
                 id="provincesManuallyBrush"
@@ -3492,7 +3492,7 @@
           <button id="culturesHeirarchy" data-tip="Show cultures hierarchy tree" class="icon-sitemap"></button>
           <button id="culturesManually" data-tip="Manually re-assign cultures" class="icon-brush"></button>
           <div id="culturesManuallyButtons" style="display: none">
-            <label data-tip="Change brush size. Shortcut: + (increase), – (decrease)" class="italic"
+            <label data-tip="Change brush size. 快捷键: + (increase), – (decrease)" class="italic"
               >Brush size:
               <input
                 id="culturesManuallyBrush"
@@ -3605,7 +3605,7 @@
 
           <button id="zonesManually" data-tip="Re-assign zones" class="icon-brush"></button>
           <div id="zonesManuallyButtons" style="display: none">
-            <label data-tip="Change brush size. Shortcut: + (increase), – (decrease)" class="italic"
+            <label data-tip="Change brush size. 快捷键: + (increase), – (decrease)" class="italic"
               >Brush:
               <input
                 id="zonesBrush"
@@ -3627,7 +3627,7 @@
             ><br />
             <button id="zonesManuallyApply" data-tip="Apply assignment" class="icon-check"></button>
             <button id="zonesManuallyCancel" data-tip="Cancel assignment" class="icon-cancel"></button>
-            <button id="zonesRemove" data-tip="Click to toggle the removal mode on brush dragging. Shortcut: ctrl" class="icon-eraser"></button>
+            <button id="zonesRemove" data-tip="Click to toggle the removal mode on brush dragging. 快捷键: ctrl" class="icon-eraser"></button>
           </div>
 
           <button id="zonesAdd" data-tip="Add new zone layer" class="icon-plus"></button>
@@ -3692,7 +3692,7 @@
 
           <button id="religionsManually" data-tip="Manually re-assign religions" class="icon-brush"></button>
           <div id="religionsManuallyButtons" style="display: none">
-            <label data-tip="Change brush size. Shortcut: + (increase), – (decrease)" class="italic"
+            <label data-tip="Change brush size. 快捷键: + (increase), – (decrease)" class="italic"
               >Brush size:
               <input
                 id="religionsManuallyBrush"
@@ -4407,9 +4407,9 @@
       <div id="saveMapData" style="display: none" class="dialog">
         <div style="margin-top: 0.3em">
           <strong>Save map to</strong>
-          <button onclick="dowloadMap()" data-tip="Download .map file to your local disk. Shortcut: Ctrl + S">machine</button>
-          <button onclick="saveToDropbox()" data-tip="Save .map file to your Dropbox. Shortcut: Ctrl + C">dropbox</button>
-          <button onclick="quickSave()" data-tip="Save the project to browser storage. It can be unreliable. Shortcut: F6">browser</button>
+          <button onclick="dowloadMap()" data-tip="Download .map file to your local disk. 快捷键: Ctrl + S">machine</button>
+          <button onclick="saveToDropbox()" data-tip="Save .map file to your Dropbox. 快捷键: Ctrl + C">dropbox</button>
+          <button onclick="quickSave()" data-tip="Save the project to browser storage. It can be unreliable. 快捷键: F6">browser</button>
         </div>
         <p>
           Maps are saved in <i>.map</i> format, that can be loaded back via the <i>Load</i> in menu. There is no way to restore the progress if file is lost.
