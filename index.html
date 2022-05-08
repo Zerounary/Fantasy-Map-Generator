@@ -273,7 +273,7 @@
 
     <div id="loading">
       <div id="titleName"><t data-t="titleName">Azgaar's</t></div>
-      <div id="title"><t data-t="title">Fantasy Map Generator</t></div>
+      <div id="title"><t data-t="title">虚幻地图生成器</t></div>
       <div id="version"><t data-t="version">v. </t>1.8</div>
       <p id="loading-text"><t data-t="loading">LOADING</t><span>.</span><span>.</span><span>.</span></p>
     </div>
@@ -298,7 +298,7 @@
           class="options"
           style="display: none"
         >
-          <t data-t="newMap">New Map!</t>
+          <t data-t="newMap">重新生成地图！</t>
         </button>
       </div>
 
@@ -309,30 +309,30 @@
           <button id="optionsHide" data-t="optionsHide" data-tip="Click to hide the Menu. Shortcut: Tab or Esc" class="options" onclick="hideOptions(event)">
             ◄
           </button>
-          <button id="layersTab" data-t="layersTab" data-tip="Click to change map layers" class="options active"><t data-t="layers">Layers</t></button>
-          <button id="styleTab" data-t="styleTab" data-tip="Click to open style editor" class="options"><t data-t="style">Style</t></button>
+          <button id="layersTab" data-t="layersTab" data-tip="Click to change map layers" class="options active"><t data-t="layers">图层</t></button>
+          <button id="styleTab" data-t="styleTab" data-tip="Click to open style editor" class="options"><t data-t="style">样式</t></button>
           <button id="optionsTab" data-t="optionsTab" data-tip="Click to change generation and UI options" class="options">
-            <t data-t="options">Options</t>
+            <t data-t="options">选项</t>
           </button>
-          <button id="toolsTab" data-t="toolsTab" data-tip="Click to open tools menu" class="options"><t data-t="tools">Tools</t></button>
-          <button id="aboutTab" data-t="aboutTab" data-tip="Click to see Generator info" class="options"><t data-t="about">About</t></button>
+          <button id="toolsTab" data-t="toolsTab" data-tip="Click to open tools menu" class="options"><t data-t="tools">工具</t></button>
+          <button id="aboutTab" data-t="aboutTab" data-tip="Click to see Generator info" class="options"><t data-t="about">关于</t></button>
         </div>
 
         <div id="layersContent" class="tabcontent" style="display: block">
-          <p data-tip="Select a map layers preset" style="display: inline-block">Layers preset:</p>
+          <p data-tip="Select a map layers preset" style="display: inline-block">预设图层:</p>
           <select data-tip="Select a map layers preset" id="layersPreset" onchange="changePreset(this.value)" style="width: 45%">
-            <option value="political" selected>Political map</option>
-            <option value="cultural">Cultural map</option>
-            <option value="religions">Religions map</option>
-            <option value="provinces">Provinces map</option>
-            <option value="biomes">Biomes map</option>
-            <option value="heightmap">Heightmap</option>
-            <option value="physical">Physical map</option>
-            <option value="poi">Places of interest</option>
-            <option value="military">Military map</option>
-            <option value="emblems">Emblems</option>
-            <option value="landmass">Pure landmass</option>
-            <option hidden value="custom">Custom (not saved)</option>
+            <option value="political" selected>政治地图</option>
+            <option value="cultural">文化地图</option>
+            <option value="religions">宗派地图</option>
+            <option value="provinces">省份地图</option>
+            <option value="biomes">生物地图</option>
+            <option value="heightmap">高度图</option>
+            <option value="physical">物理地图</option>
+            <option value="poi">名胜古迹</option>
+            <option value="military">军事地图</option>
+            <option value="emblems">标志</option>
+            <option value="landmass">纯大陆</option>
+            <option hidden value="custom">自定义 (无法保存)</option>
           </select>
           <button
             id="savePresetButton"
@@ -349,7 +349,7 @@
             onclick="removePreset()"
           ></button>
 
-          <p data-tip="Click to toggle a layer, drag to raise or lower a layer. Ctrl + click to edit layer style">Displayed layers and layers order:</p>
+          <p data-tip="Click to toggle a layer, drag to raise or lower a layer. Ctrl + click to edit layer style">显示的图层和图层顺序:</p>
           <ul data-tip="Click to toggle a layer, drag to raise or lower a layer. Ctrl + click to edit layer style" id="mapLayers">
             <li
               id="toggleTexture"
@@ -357,7 +357,8 @@
               class="buttonoff"
               onclick="toggleTexture(event)"
             >
-              Te<u>x</u>ture
+              <!-- Te<u>x</u>ture -->
+              纹理
             </li>
             <li
               id="toggleHeight"
@@ -365,7 +366,8 @@
               class="buttonoff"
               onclick="toggleHeight(event)"
             >
-              <u>H</u>eightmap
+              <!-- <u>H</u>eightmap -->
+              高度
             </li>
             <li
               id="toggleBiomes"
@@ -373,7 +375,8 @@
               class="buttonoff"
               onclick="toggleBiomes(event)"
             >
-              <u>B</u>iomes
+              <!-- <u>B</u>iomes -->
+              生物
             </li>
             <li
               id="toggleCells"
@@ -381,7 +384,8 @@
               class="buttonoff"
               onclick="toggleCells(event)"
             >
-              C<u>e</u>lls
+              <!-- C<u>e</u>lls -->
+              单元格
             </li>
             <li
               id="toggleGrid"
@@ -389,7 +393,8 @@
               class="buttonoff"
               onclick="toggleGrid(event)"
             >
-              <u>G</u>rid
+              <!-- <u>G</u>rid -->
+              网格
             </li>
             <li
               id="toggleCoordinates"
@@ -397,7 +402,8 @@
               class="buttonoff"
               onclick="toggleCoordinates(event)"
             >
-              C<u>o</u>ordinates
+              <!-- C<u>o</u>ordinates -->
+              坐标
             </li>
             <li
               id="toggleCompass"
@@ -405,14 +411,16 @@
               class="buttonoff"
               onclick="toggleCompass(event)"
             >
-              <u>W</u>ind Rose
+              <!-- <u>W</u>ind Rose -->
+              风图
             </li>
             <li
               id="toggleRivers"
               data-tip="Rivers: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: V"
               onclick="toggleRivers(event)"
             >
-              Ri<u>v</u>ers
+              <!-- Ri<u>v</u>ers -->
+              河流
             </li>
             <li
               id="toggleRelief"
@@ -420,7 +428,8 @@
               class="buttonoff"
               onclick="toggleRelief(event)"
             >
-              Relie<u>f</u>
+              <!-- Relie<u>f</u> -->
+              地标
             </li>
             <li
               id="toggleReligions"
@@ -428,7 +437,8 @@
               class="buttonoff"
               onclick="toggleReligions(event)"
             >
-              <u>R</u>eligions
+              <!-- <u>R</u>eligions -->
+              宗派
             </li>
             <li
               id="toggleCultures"
@@ -436,14 +446,16 @@
               class="buttonoff"
               onclick="toggleCultures(event)"
             >
-              <u>C</u>ultures
+              <!-- <u>C</u>ultures -->
+              文化
             </li>
             <li
               id="toggleStates"
               data-tip="States: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: S"
               onclick="toggleStates(event)"
             >
-              <u>S</u>tates
+              <!-- <u>S</u>tates -->
+              国家
             </li>
             <li
               id="toggleProvinces"
@@ -451,7 +463,8 @@
               class="buttonoff"
               onclick="toggleProvinces(event)"
             >
-              <u>P</u>rovinces
+              <!-- <u>P</u>rovinces -->
+              省份
             </li>
             <li
               id="toggleZones"
@@ -459,21 +472,24 @@
               class="buttonoff"
               onclick="toggleZones(event)"
             >
-              <u>Z</u>ones
+              <!-- <u>Z</u>ones -->
+              气候带
             </li>
             <li
               id="toggleBorders"
               data-tip="State borders: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: D"
               onclick="toggleBorders(event)"
             >
-              Bor<u>d</u>ers
+              <!-- Bor<u>d</u>ers -->
+              边界
             </li>
             <li
               id="toggleRoutes"
               data-tip="Trade routes: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: U"
               onclick="toggleRoutes(event)"
             >
-              Ro<u>u</u>tes
+              <!-- Ro<u>u</u>tes -->
+              路线
             </li>
             <li
               id="toggleTemp"
@@ -481,7 +497,8 @@
               class="buttonoff"
               onclick="toggleTemp(event)"
             >
-              <u>T</u>emperature
+              <!-- <u>T</u>emperature -->
+              温度
             </li>
             <li
               id="togglePopulation"
@@ -489,7 +506,8 @@
               class="buttonoff"
               onclick="togglePopulation(event)"
             >
-              Populatio<u>n</u>
+              <!-- Populatio<u>n</u> -->
+              人口
             </li>
             <li
               id="toggleIce"
@@ -497,7 +515,8 @@
               class="buttonoff"
               onclick="toggleIce(event)"
             >
-              Ice
+              <!-- Ice -->
+              冰川
             </li>
             <li
               id="togglePrec"
@@ -505,7 +524,8 @@
               class="buttonoff"
               onclick="togglePrec(event)"
             >
-              Precipit<u>a</u>tion
+              <!-- Precipit<u>a</u>tion -->
+              降雨
             </li>
             <li
               id="toggleEmblems"
@@ -513,21 +533,24 @@
               class="buttonoff"
               onclick="toggleEmblems(event)"
             >
-              Emblems
+              <!-- Emblems -->
+              象征
             </li>
             <li
               id="toggleLabels"
               data-tip="Labels: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: L"
               onclick="toggleLabels(event)"
             >
-              <u>L</u>abels
+              <!-- <u>L</u>abels -->
+              标签
             </li>
             <li
               id="toggleIcons"
               data-tip="Burg icons: click to toggle, drag to raise or lower the layer. Ctrl + click to edit layer style. Shortcut: I"
               onclick="toggleIcons(event)"
             >
-              <u>I</u>cons
+              <!-- <u>I</u>cons -->
+              图标
             </li>
             <li
               id="toggleMilitary"
@@ -535,7 +558,8 @@
               class="buttonoff"
               onclick="toggleMilitary(event)"
             >
-              <u>M</u>ilitary
+              <!-- <u>M</u>ilitary -->
+              军事
             </li>
             <li
               id="toggleMarkers"
@@ -543,7 +567,8 @@
               class="buttonoff"
               onclick="toggleMarkers(event)"
             >
-              Mar<u>k</u>ers
+              <!-- Mar<u>k</u>ers -->
+              标记
             </li>
             <li
               id="toggleRulers"
@@ -551,7 +576,8 @@
               class="buttonoff"
               onclick="toggleRulers(event)"
             >
-              Rulers
+              <!-- Rulers -->
+              统治者
             </li>
             <li
               id="toggleScaleBar"
@@ -559,15 +585,16 @@
               onclick="toggleScaleBar(event)"
               class="solid"
             >
-              Scale Bar
+              <!-- Scale Bar -->
+              比例尺
             </li>
           </ul>
 
           <div id="viewMode" data-tip="Set view node">
-            <p>View mode:</p>
-            <button data-tip="Standard view mode that allows to edit the map" id="viewStandard" class="pressed">Standard</button>
-            <button data-tip="Map presentation in 3D scene. Works best for heightmap. Cannot be used for editing" id="viewMesh">3D scene</button>
-            <button data-tip="Project map on globe. Cannot be used for editing" id="viewGlobe">Globe</button>
+            <p>查看模式:</p>
+            <button data-tip="Standard view mode that allows to edit the map" id="viewStandard" class="pressed">标准</button>
+            <button data-tip="Map presentation in 3D scene. Works best for heightmap. Cannot be used for editing" id="viewMesh">3D 场景</button>
+            <button data-tip="Project map on globe. Cannot be used for editing" id="viewGlobe">球体</button>
           </div>
         </div>
 
@@ -1860,11 +1887,11 @@
         </div>
 
         <div id="sticked">
-          <button id="newMapButton" data-tip="Generate a new map based on options. Shortcut: F2">New Map</button>
-          <button id="exportButton" data-tip="Select format to download image or export map data">Export</button>
-          <button id="saveButton" data-tip="Save fully-functional map in .map format">Save</button>
-          <button id="loadButton" data-tip="Load fully-functional map in .map format">Load</button>
-          <button id="zoomReset" data-tip="Reset map zoom. Shortcut: 0">Reset Zoom</button>
+          <button id="newMapButton" data-tip="Generate a new map based on options. Shortcut: F2">新建地图</button>
+          <button id="exportButton" data-tip="Select format to download image or export map data">导出</button>
+          <button id="saveButton" data-tip="Save fully-functional map in .map format">保存</button>
+          <button id="loadButton" data-tip="Load fully-functional map in .map format">加载</button>
+          <button id="zoomReset" data-tip="Reset map zoom. Shortcut: 0">重置缩放</button>
         </div>
       </div>
     </div>
